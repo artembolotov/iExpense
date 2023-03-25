@@ -68,6 +68,9 @@ struct ExpenseCell: View {
                     .font(.headline)
                 Text(item.type)
             }
+            .accessibilityElement()
+            .accessibilityLabel(item.name)
+            .accessibilityValue(item.type)
             Spacer()
             Text(item.amount, format: .currency(code: "USD"))
         }
